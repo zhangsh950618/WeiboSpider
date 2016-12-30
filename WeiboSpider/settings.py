@@ -14,12 +14,11 @@ BOT_NAME = 'WeiboSpider'
 SPIDER_MODULES = ['WeiboSpider.spiders']
 NEWSPIDER_MODULE = 'WeiboSpider.spiders'
 
-
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 # USER_AGENT = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.11; rv:47.0) Gecko/20100101 Firefox/47.0'
 
 # Obey robots.txt rules
-#ROBOTSTXT_OBEY = True
+# ROBOTSTXT_OBEY = True
 
 CONCURRENT_ITEMS = 100
 
@@ -33,25 +32,25 @@ DOWNLOAD_DELAY = 1
 DOWNLOAD_TIMEOUT = 300
 # The download delay setting will honor only one of:
 CONCURRENT_REQUESTS_PER_DOMAIN = 10
-#CONCURRENT_REQUESTS_PER_IP = 16
+# CONCURRENT_REQUESTS_PER_IP = 16
 
 # Disable cookies (enabled by default)
-#COOKIES_ENABLED = False
+# COOKIES_ENABLED = False
 
 # Disable Telnet Console (enabled by default)
-#TELNETCONSOLE_ENABLED = False
+# TELNETCONSOLE_ENABLED = False
 
 # Override the default request headers:
 DEFAULT_REQUEST_HEADERS = {
-   'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
-   'Accept-Language': 'en-US,en;q=0.5',
+    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+    'Accept-Language': 'en-US,en;q=0.5',
 }
 
 # Enable or disable spider middlewares
 # See http://scrapy.readthedocs.org/en/latest/topics/spider-middleware.html
-#SPIDER_MIDDLEWARES = {
+# SPIDER_MIDDLEWARES = {
 #    'WeiboSpider.middlewares.MyCustomSpiderMiddleware': 543,
-#}
+# }
 
 # Enable or disable downloader middlewares
 # See http://scrapy.readthedocs.org/en/latest/topics/downloader-middleware.html
@@ -63,9 +62,9 @@ DOWNLOADER_MIDDLEWARES = {
 
 # Enable or disable extensions
 # See http://scrapy.readthedocs.org/en/latest/topics/extensions.html
-#EXTENSIONS = {
+# EXTENSIONS = {
 #    'scrapy.extensions.telnet.TelnetConsole': None,
-#}
+# }
 
 # Configure item pipelines
 # See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html
@@ -92,18 +91,19 @@ AUTOTHROTTLE_MAX_DELAY = 10
 # each remote server
 AUTOTHROTTLE_TARGET_CONCURRENCY = 1.0
 # Enable showing throttling stats for every response received:
-#AUTOTHROTTLE_DEBUG = False
+# AUTOTHROTTLE_DEBUG = False
 
 # Enable and configure HTTP caching (disabled by default)
 # See http://scrapy.readthedocs.org/en/latest/topics/downloader-middleware.html#httpcache-middleware-settings
-#HTTPCACHE_ENABLED = True
-#HTTPCACHE_EXPIRATION_SECS = 0
-#HTTPCACHE_DIR = 'httpcache'
-#HTTPCACHE_IGNORE_HTTP_CODES = []
-#HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
+# HTTPCACHE_ENABLED = True
+# HTTPCACHE_EXPIRATION_SECS = 0
+# HTTPCACHE_DIR = 'httpcache'
+# HTTPCACHE_IGNORE_HTTP_CODES = []
+# HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
 
 # Your whole weibo username and password pairs.
-WEIBO_LOGIN_INFO_LIST = [('18942694073', 'rnqmcsqm8'), ('18931456418', 'aced7yjc'), ('18894797498', 'hvjfhivc2'), ('18897792104', '0icwdzed'), ]
+WEIBO_LOGIN_INFO_LIST = [('18942694073', 'rnqmcsqm8'), ('18931456418', 'aced7yjc'), ('18894797498', 'hvjfhivc2'),
+                         ('18897792104', '0icwdzed'), ('18775743645', 'scfhbup5'), ]
 # Each name of tables can be defined here (each value of items). These keys are not changeable.
 TABLE_NAME_DICT = {
     'user_info': 'user_info',
@@ -119,25 +119,25 @@ TABLE_NAME_DICT = {
 
 # Maximum follow pages(requests) crawled for per user.
 # It must be a positive number or None. None implys that crawling all follow pages.
-MAX_FOLLOW_PAGES_PER_USER = None
+MAX_FOLLOW_PAGES_PER_USER = 1
 # Maximum fan pages(requests) crawled for per user.
 # It must be a positive number or None. None implys that crawling all fan pages.
-MAX_FAN_PAGES_PER_USER = None
+MAX_FAN_PAGES_PER_USER = 1
 # Maximum post pages(requests) crawled for per user. And the maximum texts crawled in per post also equal to it.
 # It must be a positive number or None. None implys that crawling all post pages.
 MAX_POST_PAGES_PER_USER = 200
 # Maximum image pages(requests) crawled in per post.
 # It must be a positive number or None. None implys that crawling all image pages.
-MAX_IMAGE_PAGES_PER_POST = None
+MAX_IMAGE_PAGES_PER_POST = 1
 # Maximum comment pages(requests) crawled in per post.
 # It must be a positive number or None. None implys that crawling all comment pages.
-MAX_COMMENT_PAGES_PER_POST = 50
+MAX_COMMENT_PAGES_PER_POST = None
 # Maximum forward pages(requests) crawled in per post.
 # It must be a positive number or None. None implys that crawling all forward pages.
-MAX_FORWARD_PAGES_PER_POST = 50
+MAX_FORWARD_PAGES_PER_POST = 1
 # Maximum thumbup pages(requests) crawled in per post.
 # It must be a positive number or None. None implys that crawling all thumbup pages.
-MAX_THUMBUP_PAGES_PER_POST = 50
+MAX_THUMBUP_PAGES_PER_POST = 1
 
 # Your postgresql username.
 POSTGRESQL_USERNAME = 'dbuser'
@@ -147,7 +147,7 @@ POSTGRESQL_PASSWORD = '123'
 POSTGRESQL_DATABASE = 'weibo'
 
 # The IDs of users you want to crawl.
-CRAWLED_WEIBO_ID_LIST = ['5460991756', ]
+CRAWLED_WEIBO_ID_LIST = ['5460991756', '1195242865', '1254123322', '1826792401']
 
 # Email notification.
 MAIL_ENABLED = False
